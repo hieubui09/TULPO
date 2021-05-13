@@ -1,0 +1,106 @@
+@import "../../../variable.scss";
+
+.multilevel-marketing_container {
+    padding: 10rem 0;
+    .title {
+        color: #002c49;
+        @include h1-heading;
+        text-align: center;
+        margin-bottom: 10rem;
+        @include screen768 {
+            margin-bottom: 65px;
+        }
+        @include iphone {
+            margin-bottom: 50px;
+        }
+    }
+
+    .multilevel-marketing {
+        .title {
+            margin-bottom: 10rem;
+            @include screen768 {
+                @include tag-header1;
+            }
+            @include iphone {
+                @include mobile-header1;
+            }
+        }
+        .multilevel-marketing_nav {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 10rem;
+            .multilevel-marketing_btn {
+                color: #002c49;
+                @include h2-heading;
+                border: none;
+                padding: 3rem 0;
+                background-color: transparent;
+                border-bottom: 3px solid #002c49;
+                cursor: pointer;
+                width: 100%;
+                &:focus {
+                    outline: none;
+                }
+                @include screen768 {
+                    @include tag-header2;
+                }
+                @include iphone {
+                    @include mobile-header2;
+                }
+            }
+            .multilevel-marketing_btn-active {
+                border-bottom: 3px solid #f6785e;
+                color: #f6785e;
+            }
+        }
+        .multilevel-marketing_tab {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 8.6rem;
+            padding: 0 3rem;
+            height: 450px;
+            @include screen768 {
+                grid-column-gap: 1rem;
+                grid-template-columns: 1fr;
+                padding: 0;
+                height: fit-content;
+            }
+            @include iphone {
+                margin-bottom: 50px;
+                grid-template-columns: 1fr;
+                height: fit-content;
+            }
+            .multilevel-marketing_img {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 100%;
+                }
+            }
+            .multilevel-marketing_text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .multilevel-marketing_information {
+                    h1 {
+                        color: #0099ff;
+                        @include h2-heading;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        color: #002c49;
+                        @include body;
+                        margin-bottom: 2rem;
+                    }
+                }
+                .multilevel-marketing_benefits {
+                    @extend .multilevel-marketing_information;
+                }
+                .multilevel-marketing_development {
+                    @extend .multilevel-marketing_information;
+                }
+            }
+        }
+    }
+}

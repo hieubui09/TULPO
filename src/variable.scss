@@ -1,0 +1,105 @@
+@mixin screen1440 {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin screen1280 {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin screen1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin screen768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin iphone {
+    @media (max-width: 425px) {
+        @content;
+    }
+}
+
+@font-face {
+    font-family: "EncodeSans-bold";
+    src: url(../assets/Encode_Sans/static/EncodeSans-Bold.ttf);
+}
+@mixin h1-heading {
+    font-weight: bold;
+    font-size: 3.4rem;
+    line-height: 4.2rem;
+}
+@mixin h2-heading {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+@mixin h3-heading {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+@mixin body {
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+@mixin sub {
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+@mixin tag-header1 {
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+}
+@mixin tag-header2 {
+    font-weight: bold;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+}
+@mixin tag-header3 {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+@mixin tab-body {
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+@mixin tab-sub {
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+@mixin mobile-header1 {
+    font-weight: bold;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+}
+@mixin mobile-header2 {
+    font-weight: bold;
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+}
+@mixin mobile-header3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+}
+@mixin mobile-sub {
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+@mixin mobile-body {
+    font-weight: normal;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}

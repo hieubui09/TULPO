@@ -1,0 +1,226 @@
+@import "../../variable.scss";
+.careers {
+    .banner {
+        margin-top: 90px;
+        background-image: url(../assets/background-careers.png);
+        background-size: cover;
+        background-position: center;
+        & > div {
+            height: 60vh;
+            display: grid;
+            place-items: center;
+            .heading {
+                text-align: center;
+                font-weight: bold;
+                font-size: 5.4rem;
+                line-height: 8rem;
+                color: #fff;
+                span {
+                    background: -webkit-linear-gradient(
+                        180deg,
+                        #1f84b5 0%,
+                        #2dbee3 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+    main {
+        padding: 120px 0;
+        .heading {
+            text-align: center;
+            @include h1-heading;
+            color: #002c49;
+            padding-bottom: 25px;
+        }
+        .description {
+            text-align: center;
+            @include h3-heading;
+            color: #303030;
+            padding-bottom: 50px;
+        }
+        .button {
+            padding-bottom: 80px;
+            & > div {
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.6rem;
+                line-height: 2rem;
+                color: #fff;
+                padding: 12px;
+                background: #f6785e;
+                width: fit-content;
+            }
+
+            display: grid;
+            place-items: center;
+        }
+        picture {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 120px;
+            img{
+                width: unset;
+            }
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            .item {
+                padding: 0 20px;
+                display: grid;
+                grid-template-rows: 2fr 3fr 4fr;
+                &__heading {
+                    position: relative;
+                    @include h3-heading;
+                    color: #002c49;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        width: 20%;
+                        height: 3px;
+                        background-color:#F6785E ;
+                        bottom: 40px;
+                        left: 0;
+                    }
+                }
+                &__details {
+                    @include body;
+                    color: #303030;
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .careers {
+        .banner {
+            height: 40vh;
+            margin-top: 60px;
+            &>div{
+                height: 100%;
+                .heading{
+                    font-size: 3.4rem;
+                    line-height: 4.2rem;
+                }
+            }
+        }
+        main{
+            .content{
+                grid-template-columns:1fr ;
+                .item{
+                    grid-template-rows: repeat(3, min-content);
+                    text-align: center;
+                    &__heading{
+                        &::after{
+                            left: 50%;
+                            transform: translateX(-50%);
+                            bottom: -10px;
+                        }
+                        margin-bottom: 35px;
+                    }
+                    &__details{
+                        width: 50%;
+                        margin: 0 auto 50px;
+                        
+                    }
+                    img{
+                        width: 80%;
+                        margin-bottom: 65px;
+                    }
+                }
+            
+            }
+        }
+     }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .careers {
+        .banner {
+            height: 40vh;
+            margin-top: 60px;
+            &>div{
+                height: 100%;
+            }
+        }
+        main{
+            .content{
+                grid-template-columns:1fr ;
+                .item{
+                    grid-template-rows: repeat(3, min-content);
+                    text-align: center;
+                    &__heading{
+                        &::after{
+                            left: 50%;
+                            transform: translateX(-50%);
+                            bottom: -10px;
+                        }
+                        margin-bottom: 35px;
+                    }
+                    &__details{
+                        width: 50%;
+                        margin: 0 auto 50px;
+                        
+                    }
+                    img{
+                        width: 80%;
+                        margin-bottom: 65px;
+                    }
+                }
+            
+            }
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    .careers {
+        .banner {
+            height: 20vh;
+            margin-top: 60px;
+            &>div{
+                height: 100%;
+                .heading{
+                    font-size: 3.4rem;
+                    line-height: 4.2rem;
+                }
+            }
+        }
+        main{
+            padding: 40px 0;
+            picture{
+                img{
+                    width: 100%;
+                }
+            }
+            .content{
+                grid-template-columns:1fr ;
+                .item{
+                    grid-template-rows: repeat(3, min-content);
+                    text-align: center;
+                    &__heading{
+                        &::after{
+                            left: 50%;
+                            transform: translateX(-50%);
+                            bottom: -10px;
+                        }
+                        margin-bottom: 35px;
+                    }
+                    &__details{
+                        margin: 0 auto 50px;
+                        
+                    }
+                    img{
+                        width: 80%;
+                        margin-bottom: 65px;
+                    }
+                }
+            
+            }
+        }
+    }
+}

@@ -1,0 +1,205 @@
+@import "../../variable.scss";
+.recruitdetails {
+    .banner {
+        margin-top: 90px;
+        background-image: url(../assets/background-recruit.png);
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+    }
+    main {
+        padding: 120px 0;
+        & > div {
+            .filter {
+                padding: 15px 25px;
+                margin-bottom: 65px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                background: #002c49;
+                .input {
+                    width: 45%;
+                    input {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0 12px;
+                        line-height: 4.5rem;
+
+                        font-weight: 300;
+                        font-size: 1.4rem;
+                        color: rgba($color: #000000, $alpha: 0.5);
+                    }
+                }
+                .select {
+                    position: relative;
+                    background-color: #fff;
+                    padding: 0 12px;
+                    line-height: 4.5rem;
+                    font-size: 1.4rem;
+                    width: 45%;
+                    border: 1px solid #002c49;
+                    cursor: pointer;
+                    color: rgba($color: #000000, $alpha: 0.5);
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: 20px;
+                        top: 15%;
+                        width: 20px;
+                        height: 20px;
+                        transform: rotate(45deg);
+                        border-bottom: 2px solid #f6785e;
+                        border-right: 2px solid #f6785e;
+                    }
+                    &__sub {
+                        padding: 12px;
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        height: fit-content;
+                        width: 100%;
+                        border: 1px solid #002c49;
+                        background: #ffffff;
+                        z-index: 1;
+                        input {
+                            margin-right: 25px;
+                        }
+                        label {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .button {
+                    cursor: pointer;
+                    line-height: 4.5rem;
+                    background: #f6785e;
+                    width: 5rem;
+                    display: grid;
+                    place-items: center;
+                }
+            }
+            .content {
+                .heading {
+                    @include h3-heading;
+                    font-weight: normal;
+                    color: #002c49;
+                    margin-bottom: 50px;
+                    span {
+                        @include h2-heading;
+                    }
+                }
+                p {
+                    color: #303030;
+                    margin-bottom: 50px;
+                    @include body;
+                    span {
+                        @include h3-heading;
+                    }
+                }
+                p + p {
+                    span {
+                        display: block;
+                        margin-bottom: 25px;
+                    }
+                }
+                .grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 50px 100px;
+                    .item {
+                        &:first-child {
+                            grid-row: 1 / span 2;
+
+                            width: 75%;
+                        }
+                        .title {
+                            position: relative;
+                            @include h3-heading;
+                            color: #002c49;
+                            margin-bottom: 50px;
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                width: 50px;
+                                height: 3px;
+                                background-color: #f6785e;
+                                bottom: -10px;
+                                left: 0;
+                            }
+                        }
+                        ul {
+                            list-style: url(../assets/icon-checked.png);
+                            li {
+                                @include body;
+                                margin-bottom: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .form {
+        background-color: #f3f3f3;
+        & > div {
+            .heading {
+                padding: 50px 0;
+                @include h1-heading;
+                color: #002c49;
+            }
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+                input {
+                    position: relative;
+                    width: 100%;
+                    height: 60px;
+                    @include h3-heading;
+                    padding-left: 20px;
+                    background: #fbfbfb;
+                    border: 1px solid #303030;
+                    border-radius: 12px;
+                }
+                label {
+                    position: absolute;
+                    z-index: 10;
+                    transform: translate(0, -30px);
+                    @include sub;
+                }
+                & > *:nth-child(5),
+                & > *:nth-child(6),
+                & > *:nth-child(7) {
+                    grid-column: 1 / span 2;
+                }
+                & > *:nth-child(6) input {
+                    z-index: 10;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+                .item {
+                    .upload {
+                        background: #fbfbfb;
+                        border: 1px dashed #303030;
+                        border-radius: 12px;
+                        color: #f6785e;
+                        padding: 15px 0;
+                        @include h3-heading;
+                        text-align: center;
+                        transform: translateY(-60px);
+                    }
+                }
+                button {
+                    background: #f6785e;
+                    color: white;
+                    padding: 12px;
+                    font-weight: bold;
+                    @include body;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    transform: translateY(-60px);
+                }
+            }
+        }
+    }
+}

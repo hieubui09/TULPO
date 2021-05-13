@@ -1,0 +1,244 @@
+@import "../../../variable.scss";
+.dapp_container {
+    background-color: #fbfbfb;
+    .container {
+        padding: 75px 0;
+
+        @include screen768 {
+            padding: 40px 0;
+        }
+        @include iphone {
+            padding: 25px 20px;
+        }
+        .title {
+            color: #002c49;
+            @include h2-heading;
+            text-align: center;
+            @include screen768 {
+                @include tag-header1;
+            }
+            @include iphone {
+                @include mobile-header1;
+            }
+        }
+        .dapp_intro {
+            text-align: center;
+            h1 {
+                color: #002c49;
+                @include h1-heading;
+            }
+            p {
+                @include body;
+                width: 55%;
+                margin: 0 auto;
+                margin-top: 1.5rem;
+
+                color: #a4a4a4;
+                @include screen768 {
+                    @include tab-sub;
+                    width: 70%;
+                }
+                @include iphone {
+                    @include mobile-sub;
+                }
+            }
+        }
+
+        .dapp_body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 14rem;
+            grid-row-gap: 10rem;
+            margin-top: 9rem;
+            margin-bottom: 20rem;
+            @include screen768 {
+                grid-column-gap: 5rem;
+                grid-row-gap: 5rem;
+                grid-template-columns: 1fr;
+            }
+            .dapp_body_left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+            .dapp_body_right {
+                @extend .dapp_body_left;
+                align-items: flex-end;
+            }
+            .dapp_body_img {
+                width: 100%;
+            }
+            .dapp_body_service {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+                img {
+                    margin-right: 0.5rem;
+                }
+            }
+            .dapp_body_title {
+                color: #002c49;
+                margin-bottom: 3rem;
+                @include h2-heading;
+                @include screen768 {
+                    font-size: 2rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+            .dapp_body_detail {
+                @include body;
+            }
+        }
+
+        .dapp_network {
+            margin-bottom: 120px;
+            @include screen768 {
+                margin-bottom: 10rem;
+            }
+            .title {
+                margin-bottom: 75px;
+            }
+            .dapp_network_nav {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin-bottom: 10rem;
+                .dapp_network_btn {
+                    color: #002c49;
+                    @include h2-heading;
+                    border: none;
+                    padding: 3rem 0;
+                    background-color: transparent;
+                    border-bottom: 3px solid #002c49;
+                    cursor: pointer;
+                    width: 100%;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .dapp_network_btn-active {
+                    border-bottom: 3px solid #f6785e;
+                    color: #f6785e;
+                }
+            }
+            .dapp_network_tab {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 8.6rem;
+                padding: 0 3rem;
+                @include screen768 {
+                    grid-column-gap: 1rem;
+                    padding: 0;
+                }
+                @include iphone {
+                    grid-template-columns: 1fr;
+                }
+                .dapp_network_img {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .dapp_network_text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .dapp_network_advantage {
+                        h1 {
+                            color: #0099ff;
+                            @include h3-heading;
+                            margin-bottom: 1rem;
+                        }
+                        p {
+                            color: #002c49;
+                            @include body;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .dapp_network_disadvantage {
+                        @extend .dapp_network_advantage;
+                        margin-top: 3rem;
+                    }
+                }
+            }
+        }
+
+        .dapp_development {
+            margin-bottom: 120px;
+            .title {
+                margin-bottom: 25px;
+            }
+            p {
+                @include body;
+                margin-bottom: 25px;
+            }
+            ul {
+                list-style: inside url(../assets/icon-checked.png);
+                li {
+                    @include body;
+                    margin-bottom: 2rem;
+                    span {
+                        color: #0099ff;
+                    }
+                }
+            }
+            .dapp_development_list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 17.5rem;
+                @include screen768 {
+                    grid-column-gap: 5rem;
+                }
+                @include iphone {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .dapp_development_img {
+                text-align: center;
+                img {
+                    width: 60%;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .dapp_future {
+            margin-bottom: 9rem;
+            .title {
+                text-align: start;
+                margin-bottom: 2rem;
+            }
+            .dapp_future_list {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                @include screen768 {
+                    grid-template-columns: 1fr;
+                }
+            }
+            p {
+                @include body;
+                margin-bottom: 2rem;
+            }
+            ul {
+                list-style: inside url(../assets/icon-checked.png);
+                li {
+                    @include body;
+                    margin-bottom: 2rem;
+                    span {
+                        color: #0099ff;
+                    }
+                }
+            }
+
+            .dapp_future_img {
+                text-align: center;
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

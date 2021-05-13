@@ -1,0 +1,38 @@
+.showmore {
+    & > div {
+        padding: 120px 0;
+        .banner{
+            display: grid;
+            place-items: center;
+            img{
+                width: 50%;
+            }
+        }
+        .heading {
+            font-weight: bold;
+            font-size: 3.4rem;
+            line-height: 4.2rem;
+            padding: 65px 0;
+            color: #002c49;
+        }
+        .content {
+            font-weight: normal;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .showmore {
+        & > div {
+            padding: 60px 20px;
+            .banner{
+                img{
+                    width: 70%;
+                }
+            }
+        }
+    }
+}

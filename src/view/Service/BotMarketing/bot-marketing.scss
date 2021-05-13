@@ -1,0 +1,104 @@
+@import '../../../variable.scss';
+.bot-marketing_container{
+    background-color: #FBFBFB;
+    .container{
+        padding-top: 75px;
+        padding-bottom: 120px;
+
+        .bot-marketing_intro{
+            text-align: center;
+            h1{
+                color: #002C49;
+                @include h1-heading;
+                @include screen768{
+                   @include tag-header1
+                }
+                @include iphone{
+                    @include mobile-header1
+                 }
+            }
+            p{
+             @include sub;
+                margin-top: 1.5rem;
+                color: #A4A4A4;
+                @include screen768{
+                    @include tab-sub
+                 }
+                 @include iphone{
+                     @include mobile-sub
+                  }
+            }  
+        }
+
+        .bot-marketing_body{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2,1fr);
+            grid-column-gap: 14rem;
+            grid-row-gap: 10rem;
+            margin-top: 9rem;
+            @include screen768{
+                grid-column-gap: 5rem;
+                grid-row-gap: 5rem;
+                grid-template-columns: 1fr;
+            }
+            img{
+                width: 100%;
+            }
+            .readmore_btn{
+                border: none;
+                background-color: transparent;
+                color: #F6785E;
+                @include body;
+                margin-top: 3rem;
+                padding: 0rem;
+                cursor: pointer;
+                &:focus{
+                    outline: none;
+                }
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            .hide_detail{
+                display: none;
+            }
+            .bot-marketing_body_left{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                ul {
+                    list-style: inside url(../assets/icon-checked.png);
+                    li{
+                       @include body;
+                        margin-bottom: 2rem;
+                        span{
+                            color: #0099FF;
+                        }
+                    }
+                }
+            }
+            .bot-marketing_body_right{
+                @extend .bot-marketing_body_left;
+            }
+            .bot-marketing_body_img{
+                place-self: center;
+            }
+            .bot-marketing_body_title{
+                color: #002C49;
+                margin-bottom: 3rem;
+                @include h2-heading;
+                @include screen768{
+                    font-size: 2rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+            .bot-marketing_body_detail{
+                font-size: 1.4rem;
+                line-height: 2rem;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,58 @@
+@import "../../../variable.scss";
+
+.banner-wrapper {
+    margin-top: 90px;
+    height: 60vh;
+    background-image: url(../assets/banner-service.png);
+    background-size: cover;
+    background-position: bottom center;
+    display: grid;
+    align-items: center;
+    @include screen768 {
+        margin-top: 60px;
+        height: 40vh;
+    }
+    .banner {
+        .banner_text {
+            max-width: 340px;
+
+            @include screen768 {
+                width: 60%;
+            }
+        }
+        .title {
+            font-weight: bold;
+            font-size: 8.7rem;
+            line-height: 10.9rem;
+            color: #0099ff;
+            text-align: center;
+            @include screen1024 {
+                font-size: 70px;
+            }
+            @include screen768 {
+@include mobile-header1
+
+            }
+            @include iphone {
+                @include mobile-header1
+            }
+        }
+        .intro {
+            color: #303030;
+            margin-top: 2rem;
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            text-align: center;
+            @include screen1024 {
+                font-size: 18px;
+            }
+            @include iphone {
+                font-size: 8px;
+                line-height: 10px;
+                margin-top: 1rem;
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+}

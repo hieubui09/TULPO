@@ -1,0 +1,164 @@
+@import "../../../variable.scss";
+.e-wallet {
+    padding: 120px 0;
+    @include screen768 {
+        padding: 40px 0;
+    }
+    @include iphone {
+        padding: 25px 0;
+    }
+    main {
+        padding-bottom: 120px;
+        & > div {
+            .heading {
+                @include h1-heading;
+                color: #002c49;
+                padding-bottom: 75px;
+            }
+            .content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 0.5fr 0.5fr;
+                gap: 0px 80px;
+                grid-template-areas:
+                    ". img"
+                    ". img";
+                @include screen768 {
+                    display: flex;
+                    flex-direction: column;
+                }
+                @include iphone {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .title {
+                    @include h2-heading;
+                    color: #002c49;
+                    padding-bottom: 30px;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    @include screen768 {
+                        text-align: center;
+                        width: 100%;
+                    }
+                    @include iphone {
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+                .details {
+                    width: 80%;
+                    @include body;
+                    @include screen768 {
+                        width: 100%;
+                    }
+                    @include iphone {
+                        width: 100%;
+                    }
+                }
+                .img {
+                    grid-area: img;
+                    @include screen768 {
+                        margin-top: 25px;
+                        order: 1;
+                    }
+                    @include iphone {
+                        margin-top: 25px;
+                        order: 1;
+                    }
+                }
+            }
+        }
+    }
+    .slider {
+        background-image: url(../assets/background-slider.png);
+        & > div {
+            padding: 70px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @include screen768 {
+                grid-template-columns:1fr;
+            }
+            @include iphone {
+                grid-template-columns:1fr;
+            }
+            gap: 0px 80px;
+            .swipe {
+                height: 300px;
+                width: 250px;
+                display: flex;
+                place-self: center;
+                .disable {
+                    position: absolute;
+                    height: 300px;
+                    width: 250px;
+                    z-index: 1000;
+                }
+                .item {
+                    padding: 0 10px;
+                    height: 300px;
+                    background-color: white;
+                    background-image: url(../assets/background-slider-item.png);
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    border-radius: 20px;
+                    display: grid;
+                    place-items: center;
+                    ul {
+                        list-style: inside url(../assets/icon-checked.png);
+                        li {
+                            padding-bottom: 20px;
+                            font-weight: bold;
+                            font-size: 1.4rem;
+                            line-height: 1.7rem;
+                            color: #303030;
+                        }
+                    }
+                }
+                .buttons-holder {
+                    position: relative;
+                    & > div {
+                        position: absolute;
+                        width: 50px;
+                        height: 50px;
+                        display: grid;
+                        place-items: center;
+                        cursor: pointer;
+                    }
+                    .button-prev {
+                        left: -300px;
+                        bottom: 50%;
+                    }
+                    .button-next {
+                        right: -50px;
+                        bottom: 50%;
+                    }
+                }
+            }
+        }
+        .details {
+            place-self: center;
+            @include screen768 {
+                padding: 0 20px;
+            }
+            @include iphone {
+                padding: 0 20px;
+            }
+            .heading {
+                @include h2-heading;
+                color: #0099ff;
+                padding-bottom: 20px;
+            }
+            .description {
+                @include body;
+                color: #303030;
+                span {
+                    color: #0099ff;
+                }
+            }
+        }
+    }
+}

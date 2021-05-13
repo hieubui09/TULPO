@@ -1,0 +1,106 @@
+footer {
+    background: #303030;
+    color: #fbfbfb;
+    & > div {
+        padding: 80px 0 40px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .logo {
+            width: 20%;
+
+            p {
+                padding-top: 50px;
+                color: #fbfbfb;
+                font-weight: 300;
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+        nav {
+            width: 15%;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            .nav__item {
+                padding-bottom: 25px;
+                cursor: pointer;
+            }
+        }
+        .services {
+            width: 25%;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            &__item {
+                padding-bottom: 25px;
+                cursor: pointer;
+            }
+        }
+        .contact {
+            width: 20%;
+            &__heading {
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+                padding-bottom: 25px;
+            }
+            &__content {
+                font-weight: normal;
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+            }
+        }
+        .social {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            &__item {
+                margin-left: 25px;
+                display: flex;
+                align-items: flex-end;
+                font-weight: normal;
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+                cursor: pointer;
+                img {
+                    padding-right: 15px;
+                    display: grid;
+                    place-self: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    footer {
+        & > div {
+            padding: 40px 15px;
+            .logo {
+                width: 100%;
+                margin-bottom: 25px;
+                p {
+                    padding-top: 20px;
+                }
+            }
+            nav {
+                display: none;
+            }
+            .services {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+            .contact {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+            .social {
+                flex-direction: column;
+                &__item {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

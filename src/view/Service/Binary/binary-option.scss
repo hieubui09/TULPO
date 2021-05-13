@@ -1,0 +1,152 @@
+@import "../../../variable.scss";
+.binary {
+    padding: 120px 0;
+    @include screen768 {
+        padding: 40px 0;
+    }
+    @include iphone {
+        padding: 40px 0;
+    }
+    & > div {
+        .heading {
+            @include h1-heading;
+            color: #002c49;
+            margin-bottom: 60px;
+            text-align: center;
+            @include screen768 {
+                @include mobile-header1;
+            }
+            @include iphone {
+                @include mobile-header1;
+            }
+        }
+        .sub-heading {
+            @include h2-heading;
+            color: #0099ff;
+            margin-bottom: 30px;
+            @include screen768 {
+                @include mobile-header2;
+            }
+            @include iphone {
+                @include mobile-header2;
+            }
+        }
+        p {
+            @include body;
+            margin-bottom: 30px;
+            @include screen768 {
+                @include mobile-body;
+            }
+            @include iphone {
+                @include mobile-body;
+            }
+        }
+        .main-list {
+            list-style: url(../assets/icon-checked.png);
+            display: grid;
+            padding-left: 25px;
+            grid-auto-flow: column;
+            grid-template: repeat(3, 1fr) / 1fr 1fr;
+            @include screen768 {
+                display: flex;
+                flex-direction: column;
+            }
+            @include iphone {
+                display: flex;
+                flex-direction: column;
+            }
+            gap: 0 40px;
+            margin-bottom: 60px;
+            li {
+                padding-bottom: 20px;
+                font-weight: normal;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                color: #303030;
+            }
+        }
+        .img {
+            display: flex;
+            place-content: center;
+            margin-bottom: 60px;
+            @include screen768 {
+                img {
+                    width: 100%;
+                }
+            }
+            @include iphone {
+                width: 100%;
+            }
+        }
+        .tab {
+            .option {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                gap: 0 15px;
+                margin-bottom: 60px;
+                &__item {
+                    text-align: center;
+                    padding: 10px 0;
+                    background-color: rgba($color: #002c49, $alpha: 0.5);
+                    color: #fbfbfb;
+                    @include h1-heading;
+                    @include screen768 {
+                        @include mobile-header3;
+                    }
+                    @include iphone {
+                        @include mobile-header3;
+                    }
+                    cursor: pointer;
+                    &--active {
+                        background: #f6785e;
+                    }
+                }
+            }
+            .details {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                @include screen768 {
+                    grid-template-columns: 1fr;
+                }
+                @include iphone {
+                    grid-template-columns: 1fr;
+                }
+                .description {
+                    width: 80%;
+                    display: grid;
+                    align-self: center;
+                    @include screen768 {
+                        width: 100%;
+                    }
+                    @include iphone {
+                        width: 100%;
+                    }
+                    span {
+                        @include h2-heading;
+                        color: #0099ff;
+                        margin-bottom: 30px;
+                    }
+                    ul {
+                        list-style: url(../assets/icon-checked.png);
+                        padding-left: 25px;
+                        li {
+                            padding-bottom: 20px;
+                            @include body;
+                            color: #303030;
+                        }
+                    }
+                }
+                img {
+              
+                    @include screen768 {
+                        width: 100%;
+                    }
+                    @include iphone {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,177 @@
+@import "../../variable.scss";
+.procedure {
+    .banner {
+        margin-top: 90px;
+        background-image: url(../assets/background-procedure.png);
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+    }
+    main {
+        background-image: url(../assets/background-services.png);
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0;
+        .heading {
+            font-weight: bold;
+            font-size: 5.44rem;
+            line-height: 6.8rem;
+            color: #002c49;
+            text-align: center;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                height: 4px;
+                width: 200px;
+                background: #f6785e;
+                left: 50%;
+                bottom: -10px;
+                transform: translateX(-50%);
+            }
+        }
+        .content {
+            margin-top: 70px;
+            position: relative;
+            display: grid;
+            place-items: center;
+
+            &__item {
+                position: absolute;
+                background: #ffffff;
+                box-shadow: -4px 4px 12px rgba(214, 214, 214, 0.25);
+                border-radius: 12px;
+                display: grid;
+                grid-template-columns: 8fr 2fr;
+                gap: 0 30px;
+                width: 350px;
+                padding: 12px;
+                align-items: center;
+                p {
+                    @include body;
+                    color: #303030;
+                }
+                .order {
+                    @include h2-heading;
+                    color: #002c49;
+                    opacity: 0.8;
+                    border-radius: 50%;
+                    border: 2px solid #002c49;
+                    height: 60px;
+                    width: 60px;
+                    display: grid;
+                    place-items: center;
+                }
+                &:nth-child(2) {
+                    top: -5%;
+                    right: 65%;
+                }
+                &:nth-child(3) {
+                    top: 5%;
+                    left: 52%;
+                }
+                &:nth-child(4) {
+                    top: 25%;
+                    right: 60%;
+                }
+                &:nth-child(5) {
+                    top: 35%;
+                    left: 55%;
+                }
+                &:nth-child(6) {
+                    top: 57%;
+                    right: 55%;
+                }
+                &:nth-child(7) {
+                    top: 60%;
+                    left: 60%;
+                }
+                &:nth-child(8) {
+                    top: 80%;
+                    right: 50%;
+                }
+                &:nth-child(9) {
+                    top: 93%;
+                    left: 65%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .procedure {
+        .banner {
+            height: 40vh;
+            margin-top: 60px;
+        }
+        main{
+            .heading{
+                @include tag-header1;
+            }
+            .content{
+                margin-top: 60px;
+                &__item{
+                        width: 30%;
+                }
+            
+            }
+        }
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .procedure {
+        .banner {
+            height: 40vh;
+            margin-top: 60px;
+        }
+        main{
+            padding: 40px 0;
+            .heading{
+                @include tag-header1;
+            }
+            .content{
+                position: unset;
+                
+                margin-top: 60px;
+                gap: 15px 0;
+                img{
+                    display: none;
+                }
+                &__item{
+                    width: 75%;
+                        position: unset;
+                }
+            
+            }
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    .procedure {
+        .banner {
+            height: 20vh;
+            margin-top: 60px;
+        }
+        main{
+            padding: 40px 0;
+            .heading{
+                @include mobile-header1;
+            }
+            .content{
+                position: unset;
+                
+                margin-top: 60px;
+                gap: 15px 0;
+                img{
+                    display: none;
+                }
+                &__item{
+                    width: 75%;
+                        position: unset;
+                }
+            
+            }
+        }
+    }
+}

@@ -33,7 +33,7 @@
     function getSelected() {  
         if (keyword!==""){  
             job = [];   
-            lowerKeywod =  keyword.toLowerCase()
+            lowerKeywod =  keyword.toLowerCase();
             for(let i of $jobList){
                 lowerTitle = i.title.toLowerCase();
                 if(lowerTitle.includes(lowerKeywod)){

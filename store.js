@@ -247,6 +247,38 @@ let job= [
         Thời gian thử việc: 1 tháng<br>
         Tham gia các hoạt động teambuilding, nghỉ mát hàng năm...`,
     },
+    {
+        id: 9,
+        title: "Kế Toán",
+        field:"Hành chính/Văn phòng",
+        quantity: "2",
+        deadline: "01/05 - 01/06",
+        salary: `10.000.000-15.000.000`,
+        description: `- Kiểm soát độ chính xác và đối chiếu các chứng từ Thanh toán, các sổ quỹ, ngân hàng, kế toán. <br>
+        - Kiểm soát việc xuất hóa đơn và nhập các hóa đơn đầu vào lên phần mềm hóa đơn<br>
+        - Nộp tờ khai thuế và tờ khai bảo hiểm theo chữ ký số (Token key)<br>
+        - Làm bảng lương thuế, làm bảng tính thuế TNCN<br>
+        - Làm báo cáo tài chính nội bộ hàng tháng<br>
+        - Theo dõi Phân bổ công cụ dụng cụ - Tài sản cố định (Nếu có)<br>
+        - Lưu giữ chứng từ kế toán.<br>
+        - Làm tờ khai thuế GTGT, Báo cáo tình hình sử dụng hoá đơn, tờ khai thuế TNCN theo quý gửi các tờ khai quý cho quản lý trước khi gửi lên cơ quan thuế.<br>
+        - Tra soát các cước phí phải đóng để tính vào lương nhân viên khi vượt mức.<br>
+        - Làm báo cáo tài chính nộp cơ quan thuế
+        `,
+        
+        requirement: `- Kinh nghiệm từ 2 năm trở lên. Đã có kinh nghiệm làm báo cáo tài chính/ kế toán thuế, xử lý chứng từ.<br>
+        - Ưu tiên đã từng làm quyết toán thuế.
+        <br>
+       `,
+        benefit: `Mức lương: Thỏa thuận theo năng lực (Từ 10.000.000-15.000.000) + Thưởng dự án <br>
+        Hỗ trợ bữa trưa 40k/ngày, xăng xe đi lại.<br>
+        Lương tháng 13 + Thưởng lễ, Tết,…<br>
+        Môi trường làm việc trẻ trung , năng động, sáng tạo.<br>
+        Trà, Coffee luôn sẵn sàng cho ngày làm việc.<br>
+        Được đóng bảo hiểm theo quy định của pháp luật<br>
+        Thời gian thử việc: 1 tháng<br>
+        Tham gia các hoạt động teambuilding, nghỉ mát hàng năm...`,
+    },
 ];
 export let jobList=writable(job);
 export let currentJob=writable({});

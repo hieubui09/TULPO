@@ -28,11 +28,15 @@
     let selected = [];
     let keyword;
     let test;
+    let lowerTitle;
+    let lowerKeywod;
     function getSelected() {  
         if (keyword!==""){  
-            job = [];       
+            job = [];   
+            lowerKeywod =  keyword.toLowerCase()
             for(let i of $jobList){
-                if(i.title.includes(keyword)){
+                lowerTitle = i.title.toLowerCase();
+                if(lowerTitle.includes(lowerKeywod)){
                     job.push(i);                  
                 }
             }
@@ -40,10 +44,10 @@
             keyword ="";
             selected =[];
             return     
-
         }else{
                 selected = [];
                 job = [];
+                test = "";
                 for (let i in document.querySelectorAll(".select__sub>input")) {
                     if (document.querySelectorAll(".select__sub>input")[i].checked) {
                         selected.push(
@@ -154,8 +158,6 @@
                         <div class="option__item">Danh sách việc làm
                             {#if test}
                             - "{test}"
-                            <!-- {:else}
-                            {test = ""}  -->
                             {/if}
                         </div>
 
